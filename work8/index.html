@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work8</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        .container1 {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+        }
+        .list {
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .list1 {
+            font-size: 15px;
+            color: white;
+            display: flex;  
+        }
+        .list1 li {
+            padding-left: 20px;
+        }
+        .list1 li:nth-child(1) {
+            color: sandybrown;
+            padding-left: 0px;
+        }
+        .list2 {
+            font-size: 8px;
+            color: white;
+            display: flex; 
+        }
+        .list2 li {
+            padding-right: 5px;
+            width: 70px;
+        }
+        .list2 li:before {
+            content: '';
+            display:inline-block;
+            height: 20px;
+            width: 20px;
+            background-image: url(./images/2.png);
+            background-position: -230px -20px;
+        }
+        .list3 {
+            font-size: 8px;
+            color: white;
+            display: flex; 
+        }
+        .list3 li {
+            padding-right: 10px;;
+        }
+        .search_1 {
+            height: 25px;
+            line-height: 25px;
+            color: lightgray;
+            font-size: 8px;
+            position:absolute;
+            margin-left: 10px;
+        }
+        .container2 {
+            width: 100%;
+            height: 600px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .center {
+            width: 1000px;
+            height: 600px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .left {
+            width: 580px;
+            height: 600px;
+
+        }
+        .geci {
+            width: 400px;
+            font-size: 10px;
+            margin: 0 auto;
+        }
+        .songName {
+            font-size: 15px;
+            text-align: center;
+            color: lightslategrey;
+        }
+        .songName_1 {
+            font-size: 8px;
+            color:lightgrey;
+            margin-left: 50px;
+            display: flex;
+        }
+        .songName_2 {
+            font-size: 5px;
+            color:gray;
+            text-align: center;
+        }
+        .songName_img {
+            height: 14px;
+            width: 15px;
+            background-image: url(./images/8.jpg);
+            margin-top: 10px;
+        }
+        .fontYellow {
+            color: orange;
+        }
+        .song {
+            text-align: center;
+            line-height: 20px;
+            color:lightsalmon;
+        }
+        .right {
+            margin-right: 60px;
+        }
+        @keyframes animation1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        #img1{
+            height: 200px;
+            width: 200px;
+            border: 1px solid lightgray;
+            padding: 3px;
+            border-radius: 50%;
+            margin-left: 80px;
+            animation: animation1 8s linear infinite;
+        }
+        .right_bottom {
+            width: 350px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        #start {
+            height: 41px;
+            width: 41px;
+            background-image: url(./images/6.jpg);
+            background-position: 166px 0px;
+        }
+      
+        #gray {
+            width: 230px;
+            height: 4px;
+            background-color: rgb(204, 204, 204);
+            margin-left: 5px;
+
+        }
+        .right_r {
+            display: flex;
+        }
+        #time {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 5px;
+            font-size: 12px;
+            color: rgb(204, 204, 204);
+        }
+        #sound {
+            width: 25px;
+            height: 20px;
+            margin-left: 5px;
+            margin-top: 5px;
+            background-image: url(./images/6.jpg);
+            background-position: 235px 0px;
+        }
+        #yellow {
+            background-color:rgb(255, 205, 45);
+            height: 7px;
+            width: 7px;
+            margin-top: -1px;
+            border-radius: 50%;
+            position: absolute;
+
+        }
+        #beYellow {
+            position: absolute;
+            height: 4px;
+        }
+        .download {
+            width: 200px;
+            height: 43px;
+            background-image: url(./images/6.jpg);
+            background-position: -275px -44px;
+            margin: 0 auto;
+            margin-top: 40px;
+            position: relative;
+        }
+        .load {
+            position: absolute;
+            height: 18px;
+            width: 19px;
+            background-image: url(./images/6.jpg);
+            background-position: -276px 0px;
+            margin-top: 15px;
+            margin-left: 25px;
+            
+        }
+        .character {
+            position: absolute;
+            width: 200px;
+            height: 43px;
+            line-height: 43px;
+            color: black;
+            margin-left: 50px;
+        }
+        .guoziyi {
+            height: 100px;
+            width: 350px;
+            margin-top: 20px;
+            display: flex;
+            
+        }
+        .img {
+            width: 30px;
+            height: 30px;
+            background-image: url(./images/郭子仪.jpg);
+            background-size:cover;
+            transform: scale(1.2,1.2);
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .guoziyi .h5 {
+            background-image: url(./images/7.jpg);
+            height: 55px;
+            width: 250px;
+            margin-left: 10px;
+            font-size: 3px;
+         
+        }
+        .guo_h5 {
+            margin-left: 15px;
+            color: gray;
+        }
+        .guo_gif {
+            margin-left: 15px;
+            margin-top: 10px;
+            height: 10px;
+            width: 10px;
+            transform: scale(0.4,0.4);
+        }
+        .guo_sheep {
+            margin-left: 45px;
+            margin-top: -10px;
+            color:dodgerblue;
+        }
+        .guo_r {
+            margin-left: 170px;
+            margin-top: -15px;
+            color:darkturquoise;
+        }
+        .container3 {
+            width: 100%;
+            height: 600px;
+            margin-top: 40px;
+            
+        }
+        .bottom {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .bottom p {
+            float: left;
+            margin-top: 10px;
+            color: lightslategray;
+        }
+        .bottom p:nth-child(1) {
+            font-size: 10px;
+        }
+        .bottom p:nth-child(2) {
+            font-size: 3px;
+        }
+        .solid {
+            margin-left: -3px;
+        }
+        .comment {
+            height: 200px;
+            width: 600px;
+            display: flex;
+        }
+        .comment_block {
+            height: 150px;
+            width: 500px;
+            margin-left: 10px;
+        }
+  
+        #share {
+            height: 80px;
+            width: 500px;
+            border: 1px solid lightgrey;
+            font-size: 10px;
+            color: lightgray;
+            vertical-align: super;
+        }
+        .comment_block_2 {
+            width: 500px;
+            height: 50px;
+            margin-top: 10px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .smile {
+            height: 20px;
+            width: 20px;
+            background-image: url(./images/smile.png);
+        }
+        .block2_right {
+            display: flex;
+        }
+        .font {
+            color: black;
+            font-size: 3px;
+            display: flex;
+            margin-top: 3px;
+            margin-right: 5px;
+            
+        }
+        #btn_com {
+            height: 20px;
+            background-color: gold;
+            color: white;
+            border-style: none;
+        }
+
+        .comment_amazing1 {
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+        }  
+        .comment_amazing1 div:nth-child(1) {
+            color:lightslategrey;
+            font-size: 5px;
+
+        }
+        .comment_bottom_n {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            margin-top: 20px;
+        }
+        #comment_bottom {
+            position:absolute;
+            width: 600px;
+            height: 300px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction:column;
+        }
+        .myComment {
+            width: 600px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed lightgray;
+            display: flex;
+            justify-content: space-between;
+        }
+        #myComment1 {
+            display: none;
+        }
+        .myComment_1 {
+            width: 530px;
+            height: 78px;
+            margin-left: 20px;
+        }
+        .top_name {
+            width: 530px;
+            height: 20px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .guo {
+            color: salmon;
+            font-size: 15px;
+        }
+        .fenxiang {
+            font-size: 5px; 
+            color: gray;
+        }
+        .comment_content1 {
+            width: 530px;
+            height: 30px;
+            font-size: 10px;
+            color: black;
+ 
+        }
+        .bottom_time {
+            width: 530px;
+            height: 25px;
+            font-size: 10px;
+            color: darkgrey;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }  
+        #comment_time {
+            width: 150px;
+        }    
+        .bottom_right {
+            width: 100px;
+            font-size: 10px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .page {
+            margin: 0 auto;
+            margin-top: 70px;
+            width: 200px;
+            height: 30px;
+            display: flex;
+        }
+        .page div {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color:whitesmoke;
+            color: darkgray;
+            margin-right: 5px;
+            
+        }
+        .page div:nth-child(2) {
+            background-color: gold;
+        }
+        .left img {
+            transform: rotate(180deg);
+            margin-left: 7px;
+        }
+        #right img {
+            margin-left: 7px;
+        }
+        #comment_bottom1 {
+            position:absolute;
+            width: 600px;
+            height: 300px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction:column;
+            display: none;
+        }
+
+        #comment_bottom2 {
+            width: 600px;
+            height: 300px;
+            margin-top: 20px;
+            display: flex;
+            border:  1px solid green;
+            flex-direction:column;
+        }
+        
+    </style>
+</head>
+<body>
+    <audio autoplay="autoplay" id="mymusic">
+        <source src="./2.mp3" type="audio/mp3">
+    </audio>
+    <div class="container1">
+        <div class="top"><!-- 页面导航 -->
+            <div class="logo"><!-- 图标 -->
+                <img src="./images/3.jpg" />
+            </div>
+            <div class="list">  <!-- 导航 -->
+                <ul class="list1">
+                    <li>首页</li>
+                    <li>榜单</li>
+                    <li>歌手</li>
+                    <li>下载酷我客户端</li>
+                </ul>
+                <ul class="list2">
+                    <li id="list2_1">美女秀</li>
+                    <li id="list2_2">酷我耳机</li>
+                    <li id="list2_3">VIP会员</li>
+                    <li id="list2_4">i听</li>
+                </ul>
+                <ul class="list3">
+                    <li>更多服务</li>
+                    <li>登录</li>
+                    <li>^</li>
+                </ul>
+            </div>
+            <div class="search"><!-- 搜索栏 -->
+                <div class="search_1">找到好音乐</div>
+                <img src="./images/4.png" />
+            </div> 
+
+        </div>  
+    </div>
+    <div class="container2">
+        <div class="center"><!-- 中间部分 -->
+            <div class="left"><!-- 左部分 -->
+                <div class="geci"><!-- 歌词 -->
+                    <div class="songName">喜羊羊</div>    
+                    <div class="songName_1">
+                        <p>专辑：</p>
+                        <p class="fontYellow">儿歌大全&nbsp&nbsp&nbsp</p>
+                        <p>歌手：</p>
+                        <p class="fontYellow">华语群星&nbsp&nbsp</p>
+                        <p>分享&nbsp&nbsp</p>
+                        <div class="songName_img"></div>
+                        <p class="fontYellow">&nbsp&nbsp评论</p>
+                    </div>
+                    <div class="songName_2">上传时间：2015-10-17&nbsp&nbsp&nbsp歌曲来源：网络</div>
+                    <p style="color: lightgray;">———————————————————————————————</p>
+                    <div class="song">
+                        <p>别看我只是一只羊</p>
+                        <p>绿草也为我变的更香</p>
+                        <p>天空因为我变的更蓝</p>
+                        <p>白云也为我变的柔软</p>
+                        <p>别看我只是一只羊</p>
+                        <p>羊儿的聪明难以想像</p>
+                        <p>天再高心情一样奔放</p>
+                        <p>每天都追赶太阳...</p>
+                        <p>有什么难题去牵绊我都不会去心伤</p>
+                        <p>有什么危险在我面前也不会去慌乱</p>
+                        <p>就算有狼群把我追捕也当做游戏一场</p>
+                        <p>在什么时间都爱开心笑容都会飞翔</p>
+                        <p>就算会摔倒站得起来永远不会沮丧</p>
+                        <p>在所有天气拥有叫人大笑的力量</p>
+                        <p>虽然我只是羊… …</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="right"><!-- 右部分 -->
+                <div ><!-- 喜洋洋 -->
+                    <img src="./images/1.jpg" id="img1" />
+                </div>
+                <div class="right_bottom"><!-- 播放 进度条 -->
+                    <div id="start"> <!-- 播放 -->
+                    </div>
+                    <div id="prograssBar"><!-- 进度条 -->
+                        <div id="gray">
+                            <div id="beYellow"></div>
+                            <div id="yellow"></div>
+                        </div>
+                    </div>
+                    <div class="right_r"> <!-- 时间 音量 -->
+                        <div id="time">00:00</div>
+                        <div id="sound"></div>
+                    </div>
+                </div>
+                <div class="download"><!-- 下载 -->
+                    <div class="load"></div>
+                    <div class="character">免费下载这首歌</div><!-- 文字 -->
+                </div>
+                <div class="guoziyi"> <!-- 郭子仪 -->
+                    <div class="img"></div>
+                    <div class="h5">
+                        <div class="guo_h5">郭子仪--H5班</div>
+                        <div class="guo_gif">
+                            <img src="./images/gif.gif"/>
+                        </div>
+                        <div class="guo_sheep">喜羊羊与灰太狼</div>
+                        <div class="guo_r">去现场>></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="bottom">
+            <p>评论&nbsp&nbsp</p>
+            <p>17034条评论</p>
+            <p class="solid" style="color: lightgray;">——————————————————————————————————</p>
+            <div class="comment">
+                <div class="img"></div>
+                <div class="comment_block">
+                    <div class="comment_block_1">
+                        <textarea id="share">分享你的音乐见解</textarea>
+                    </div>
+                    <div class="comment_block_2">
+                        <div class="smile"></div>
+                        <div class="block2_right">
+                            <div class="font">
+                                <div >已输入</div>
+                                <div id="count">0</div>
+                                <div>个字</div>
+                            </div>
+                            <button id="btn_com">评论</button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="comment_amazing">
+                <div class="comment_amazing1">
+                    <div>精彩评论&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                    <div class="solid" style="color: lightgray;">———————————————————————————————————</div>
+                </div>
+            </div>
+            <div class="comment_bottom_n">
+                <div id="comment_bottom" >
+                    <div class="myComment" id="myComment1">
+                        <div class="img"></div>
+                        <div class="myComment_1">
+                            <div class="top_name">
+                                <div class="guo">郭子仪</div>
+                                <div class="fenxiang" style="font-size: 5px; color: gray;">分享</div>
+                            </div>
+                            <div class="comment_content1" id="comment_content"></div>
+                            <div class="bottom_time">
+                                <div class="comment_time1" id="comment_time"></div>
+                                <div class="bottom_right">
+                                    <div class="delete1" id="delete">删除</div>
+                                    <div class="imgSrc">
+                                        0<img class="imgg" src="./images/9.jpg" />
+                                    </div>
+                                    <div class="respon">回复</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="comment_bottom1">
+                    <div class="myComment" id="myComment1">
+                        <div class="img"></div>
+                        <div class="myComment_1">
+                            <div class="top_name">
+                                <div class="guo">郭子仪</div>
+                                <div class="fenxiang" style="font-size: 5px; color: gray;">分享</div>
+                            </div>
+                            <div class="comment_content1" id="comment_content"></div>
+                            <div class="bottom_time">
+                                <div class="comment_time1" id="comment_time"></div>
+                                <div class="bottom_right">
+                                    <div class="delete1" id="delete">删除</div>
+                                    <div class="imgSrc">
+                                        0<img class="imgg" src="./images/9.jpg" />
+                                    </div>
+                                    <div class="respon">回复</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page">
+                <div class="left">
+                    <img src="./images/next.png" />
+                </div>
+                <div class="1">&nbsp1</div>
+                <div class="2">&nbsp2</div>
+                <div class="3">&nbsp3</div>
+                <div class="4">...</div>
+                <div class="5">17</div>
+                <div id="right">
+                    <img src="./images/next.png" />
+                </div>
+            </div>
+
+        
+        </div>
+        
+    </div>
+    
+</body>
+<script>
+    var myaudio = document.getElementById("mymusic");
+    var list2_1 = document.getElementById("list2_1");
+    var list2_2 = document.getElementById("list2_2");
+    var list2_3 = document.getElementById("list2_3");
+    var list2_4 = document.getElementById("list2_4");
+    var img2 = document.getElementById("img2");
+    var beYellow = document.getElementById("beYellow");
+    var yellow = document.getElementById("yellow");
+    var time = document.getElementById("time");
+    var sound = document.getElementById("sound");
+    var share = document.getElementById("share");
+    var count = document.getElementById("count");
+    var btn_com = document.getElementById("btn_com");
+    var comment_bottom = document.getElementById("comment_bottom");
+    var myComment = document.getElementsByClassName("myComment");
+    var comment_content1 = document.getElementById("comment_content1");
+    var right = document.getElementById("right");
+    var currentTime = myaudio.currentTime;
+    var durationTime = 0;
+    var tag  = true;
+    var idTime;
+    var dataList = [];
+    var i = 0;
+    start.onclick = function() {
+        durationTime = myaudio.duration;
+        if(tag == true) {
+            start.style.backgroundPositionX = 69+ "px";
+            myaudio.play();
+            tag = false;
+
+            idTime = setInterval(function() {
+                currentTime++;
+                var percent = currentTime / durationTime;
+                if(percent>=1){
+                myaudio.pause();
+                start.style.backgroundPositionX = 166+ "px";
+                clearInterval(idTime);
+                }
+                var m = parseInt(currentTime/60);
+                var s = parseInt(currentTime%60);
+                m=m>9 ? m:"0"+m;
+                s=s>9 ? s:"0"+s;
+                time.innerHTML = m +":"+ s;
+                yellow.style.left = (percent*225+765)+"px";
+                beYellow.style.width = percent*225+"px";
+                beYellow.style.backgroundColor = 'rgb('+255+',' +205+',' +45+')';
+            },1000)
+
+        }else {
+            myaudio.pause();
+            start.style.backgroundPositionX = 166+ "px";
+            clearInterval(idTime);
+            tag = true;
+        } 
+        
+    }
+    sound.onclick = function() {
+        if(myaudio.muted == false) {
+           myaudio.muted = true; 
+        }
+        else {
+            myaudio.muted = false; 
+        }
+        
+    }
+
+
+    share.onclick = function() {
+        share.value = '';
+        
+    }
+    btn_com.onclick = function() {
+        saveStorage();
+        createElement();
+        i++;
+        console.log(comment_bottom.children.length);
+        if(comment_bottom.children.length>4) {
+            comment_bottom1.appendChild(comment_bottom.children[comment_bottom.children.length-4]);
+        }
+    }
+    right.onclick = function() {
+        console.log(1);
+        comment_bottom1.style.display = "block";
+        comment_bottom.style.display = "none";
+        
+    }
+    share.oninput = function() {
+        count.innerHTML = share.value.length;
+    }
+    function createElement() {
+        var myComment = document.createElement("div");
+        myComment.className = "myComment";
+        comment_bottom.appendChild(myComment);
+        var img = document.createElement("img");
+        img.className = "img";
+        var myComment_1 = document.createElement("div");
+        myComment_1.className = "myComment_1";
+        myComment.appendChild(img);
+        myComment.appendChild(myComment_1);
+        var top_name = document.createElement("div");
+        var comment_content1 = document.createElement("div");
+        var bottom_time = document.createElement("div");
+        top_name.className = "top_name";
+        comment_content1.className = "comment_content1";
+        bottom_time.className = "bottom_time";
+        myComment_1.appendChild(top_name);
+        myComment_1.appendChild(comment_content1);
+        myComment_1.appendChild(bottom_time);
+        var guo = document.createElement("div");
+        var fenxiang = document.createElement("div");
+        guo.className = "guo";
+        guo.innerHTML = "郭子仪";
+        fenxiang.className = "fenxiang";
+        fenxiang.innerHTML = "分享";
+        top_name.appendChild(guo);
+        top_name.appendChild(fenxiang);
+        var comment_time1 = document.createElement("div");
+        var bottom_right = document.createElement("div");
+        comment_time1.className = "comment_time1";
+        bottom_right.className = "bottom_right";
+        bottom_time.appendChild(comment_time1);
+        bottom_time.appendChild(bottom_right);
+        var delete1 = document.createElement("div");
+        var imgSrc = document.createElement("div");
+        var respon = document.createElement("div");
+        delete1.className = "delete1";
+        imgSrc.className = "imgSrc";
+        respon.className = "respon";
+        delete1.innerHTML = "删除";
+        imgSrc.innerHTML = "0";
+        respon.innerHTML = "回复";
+        bottom_right.appendChild(delete1);
+        bottom_right.appendChild(imgSrc);
+        bottom_right.appendChild(respon);
+        var imgg = document.createElement("img");
+        imgg.src ='./images/9.jpg'
+        imgg.className = "imgg";
+        imgSrc.appendChild(imgg);
+
+
+        var list = localStorage.getItem("key");
+        var value = JSON.parse(list);
+        var index = value.length-1;
+        comment_content1.innerHTML = value[index].Value;
+        comment_time1.innerHTML = value[index].Time
+
+    }
+    function saveStorage() {
+        var date = new Date();
+        var time;
+        var time1 = date.toLocaleDateString().split("/").join("-0");
+        var time2 = date.getMinutes() > 9?date.getMinutes(): "0"+date.getMinutes();
+        var time3 = date.getHours() > 9?date.getHours(): "0"+date.getHours();
+        var time4 = date.getSeconds() >9?date.getSeconds():"0"+date.getSeconds();
+        time = time1+" "+time3+":"+time2+":"+time4;
+        var data = {Value:share.value,Time:time};
+        dataList.push(data);
+        var dataString = JSON.stringify(dataList);
+        localStorage.setItem("key",dataString);
+    }
+
+    window.onload = function() {
+        createElement();
+    }
+
+      
+
+</script>
+</html>
